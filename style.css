@@ -1,4 +1,4 @@
-/* copyright Leonid Khlivnyuk aka Taurus - khlivnyuk.com. All rights reserved */
+/* copyright Leonid Khlivnyuk - khlivnyuk.com. All rights reserved */
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td {margin:0; padding:0;}
 table {border-collapse:collapse;border-spacing:0;}
@@ -14,7 +14,401 @@ font-size: 100.01%;
 
 body {
 	font-family: "Trebuchet MS", sans-serif;
-	background: #fcfcfc;
 }
 
 a {color: #0072bc;}
+
+#wrapper {
+	margin: 0 auto;
+	width: 900px;
+	background: url('img/logo_head.png') top no-repeat;
+}
+
+#header {
+	margin: 0 auto;
+	width: 900px;
+	height: 135px;
+}
+
+#header a {
+	display: block;
+	width: 900px;
+	height: 100px;
+}
+
+#header strong {
+	display: none;
+}
+
+.top_h1 {
+	display: none;
+}
+
+.menu {
+	height: 40px;
+	display: block;
+}
+
+.menu li.home_link {
+	padding: 0 0 0 10px;
+	border-left: 0px;
+	list-style: none; 
+	float: left;
+	border-right: 0px dotted #b1b3b8;
+	margin: 0 1px 0 -1px;
+}
+
+.home_link a {
+	display: block;
+	height: 17px;
+	width: 17px;
+	background: url('img/icon_home.gif') 3px no-repeat;	
+}
+
+.home_link b {
+	display: none;	
+}
+
+div.menu ul {
+	overflow: hidden;
+}
+div.menu li {
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: uppercase;
+	list-style: none; 
+	float: left; 
+	border-right: 1px dotted #b1b3b8; 
+	padding: 0 30px; 
+	margin: 0 1px 0 -1px;
+}
+
+
+.thumbs_gallery {
+	width: 900px;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+
+
+.gallery {
+	list-style: none;
+}
+.gallery li {
+	padding: 0px;
+	margin: 10px 0px 0px 0px;
+	float: left;
+	position: relative;
+}
+.gallery img {
+	display: block;
+	border: solid 1px #d2e2e6;
+	padding: 4px;
+	margin: 0px 10px 10px 10px;
+	width: 270px;
+	height: 150px;
+}
+.gallery li:hover img, .gallery li.sfhover img {
+	border-color: #c9d8dc;
+}
+.gallery strong {
+	background: #fff url('img/grey-gradient.gif') repeat-y;
+	color: #515559;
+	font-style: normal;	
+	font-size: 11px;
+	padding: 2px 10px;
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: 7px;
+	border-left: solid 1px #d2e2e6;
+	border-bottom: solid 1px #d2e2e6;
+}
+.gallery a {
+	text-decoration: none;
+}
+.gallery li:hover strong, .gallery li.sfhover strong {
+	background: #ffdb01 url('img/orange-gradient.gif') repeat-y;
+	text-shadow: 0px 1px 1px #ffffff;
+}
+
+.gallery em {
+	display: none;
+}
+
+.gallery li:hover em, .gallery li.sfhover em {
+	background: #0066a9 url('img/gallery_tips.png') repeat-y;
+	color: #fff;
+	font-style: normal;	
+	font-size: 11px;
+	padding: 2px 10px;
+	display: block;
+	width: 250px;
+	height: 50px;
+	position: absolute;
+	top: 100px;
+	left: 15px;
+	border-top: 1px solid #fff;
+	overflow: hidden;
+	text-shadow: 0px 1px 1px #008bbe;
+}
+
+.all_work {
+	font-size: 13px;
+	color: #0072bc;
+	clear: both;
+}
+
+.all_work p {
+	padding: 0px 0px 0px 10px;
+}
+
+.all_work strong {
+	font-weight: bold;
+}
+
+.all_work sup {
+	color: #c2c2c2;
+	font-weight: normal;
+}
+
+
+.footer {
+	margin: 20px auto 0px auto;
+	width: 880px;
+	overflow: hidden;
+	background: url('img/color_bottom.png') top no-repeat;
+}
+
+.bottom {
+	margin: 22px auto 20px auto;
+	padding: 20px 0px 0px 0px;
+	background: #fff;
+	overflow: hidden;
+}
+
+.copyright_description {
+	float: left;
+	font-size: 11px;
+	color: #515559;
+	height: 31px;
+	line-height: 31px;
+	padding: 0px 0px 0px 0px;
+}
+
+.copyright {
+	float: right;
+	overflow: hidden;
+	font-size: 11px;
+	color: #515559;
+	height: 31px;
+	line-height: 31px;
+	padding: 0px 0px 0px 0px;
+}
+
+.copyright img {
+	display:block;
+	float:right;
+	width: 88px;
+	height: 31px;
+	margin: 0 0 0 10px;
+}
+
+
+/* MODAL */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	background-color: rgba(0,0,0,0.5);
+	display: none;
+
+}
+
+.modal {
+	width: 400px;
+	height: 400px;
+	line-height: 250px;
+	position: fixed;
+	top: 50%; 
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -200px;
+	background-color: #ffffff;
+	text-align: center;
+	z-index: 11;
+	background: url('img/contact.png') 50% 50% no-repeat;
+	box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.506);
+}
+
+/* Header */
+.content {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background-size: cover;
+	background-color: rgba(255, 83, 83, 0.96);
+	z-index: 1;
+	
+}
+
+.large-header {
+	background: url('img/khlivnyuk_design.png') center center no-repeat fixed;
+	background-size: 100% auto;
+}
+
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 500px;
+	height: 30px;
+	color: #fff;
+	text-align: center;
+	top: 20%;
+	left: 50%;
+	margin: -15px 0 0 -250px;
+	text-transform: uppercase;
+}
+
+.contact_btn {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	bottom: 2%;
+	left: 50%;
+	margin: 0 0 0 -50%;
+}
+
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 20px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-size: 18px;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	border: 3px solid #fff;
+	color: #fff;
+}
+
+.btn:hover,
+.btn:active {
+	color: #222;
+	background: #fff;
+}
+
+@media only screen and (max-width: 1400px) {
+.contact_btn {
+	bottom: 5%;
+}
+
+}
+
+@media only screen and (max-width: 1300px) {
+.contact_btn {
+	bottom: 10%;
+}
+
+}
+
+@media only screen and (max-width: 1100px) {
+.contact_btn {
+	bottom: 15%;
+}
+
+}
+
+@media only screen and (max-width: 767px) {
+
+.contact_btn {
+	bottom: 25%;
+}
+
+#wrapper {display:none;}
+
+}
+
+@media only screen and (max-width: 480px) {
+.large-header {
+	background: url('img/khlivnyuk_design_480px.png') center center no-repeat;
+}
+
+
+.main-title {
+	height: 30px;
+	left: 50%;
+	margin: -15px 0px 0px -180px;
+	padding: 0px;
+	position: absolute;
+	text-align: center;
+	text-transform: uppercase;
+	top: 20%;
+	width: 360px;
+}
+
+.contact_btn {
+	bottom: 3% !important;
+}
+
+}
+
+@media only screen and (max-width: 320px) {
+.large-header {
+	background: url('img/khlivnyuk_design_320px.png') center center no-repeat;
+}
+
+.main-title {
+	height: 30px;
+	left: 50%;
+	margin: -15px 0px 0px -150px;
+	padding: 0px;
+	position: absolute;
+	text-align: center;
+	text-transform: uppercase;
+	top: 20%;
+	width: 300px;
+}
+
+.contact_btn {
+	bottom: 15% !important;
+}
+
+}
+
+@media only screen and (max-height: 710px) {
+.contact_btn {
+	bottom: 3%;
+}
+.btn {color: #fff; background: #FF5B5B;}
+.btn {
+	padding: 10px 50px;
+	margin: 15px 10px;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+}
