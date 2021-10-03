@@ -1,0 +1,1 @@
+/* copyright Leonid Khlivnyuk - khlivnyuk.com. All rights reserved */
